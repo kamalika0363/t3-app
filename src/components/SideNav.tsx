@@ -1,6 +1,6 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import { VscAccount, VscHome, VscSignIn, VscSignOut } from "react-icons/vsc";
+import { VscAccount, VscHome, VscSignIn, VscSignOut, VscGithub } from "react-icons/vsc";
 import { IconHoverEffect } from "./IconHoverEffect";
 
 export function SideNav() {
@@ -16,6 +16,16 @@ export function SideNav() {
               <span className="flex items-center gap-4">
                 <VscHome className="h-8 w-8" />
                 <span className="hidden text-lg md:inline">Home</span>
+              </span>
+            </IconHoverEffect>
+          </Link>
+        </li>
+        <li>
+          <Link href="https://github.com/kamalika0363/t3-app" target="_blank">
+            <IconHoverEffect>
+              <span className="flex items-center gap-4">
+                <VscGithub className="h-8 w-8" />
+                <span className="hidden text-lg md:inline">Github</span>
               </span>
             </IconHoverEffect>
           </Link>
