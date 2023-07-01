@@ -55,7 +55,7 @@ export function InfiniteTweetList({
 }
 
 const dateTimeFormatter = new Intl.DateTimeFormat(undefined, {
-  dateStyle: "Long",
+  dateStyle: "long",
 });
 
 function TweetCard({
