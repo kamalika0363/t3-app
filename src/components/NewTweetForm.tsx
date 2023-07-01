@@ -95,7 +95,7 @@ function Form() {
           placeholder="What's happening?"
         />
       </div>
-      <Button className="self-start">Post</Button>
+      <Button className="self-end sm:self-start">Post</Button>
     </form>
   );
 }
