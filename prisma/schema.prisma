@@ -19,10 +19,25 @@ model Tweet {
 
     user  User   @relation(fields: [userId], references: [id], onDelete: Cascade)
     likes Like[]
-
+    
     @@unique([createdAt, id])
     @@index([userId])
 }
+
+model Comment {
+  id           String   @id @default(cuid())
+  body               String
+  content           String
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  userId             String 
+  tweetId             String 
+
+    @@index([userId])
+    @@index([tweetId])
+
+}
+
 
 model Like {
     userId  String
