@@ -53,8 +53,8 @@ export const authOptions: NextAuthOptions = {
       clientSecret: env.DISCORD_CLIENT_SECRET,
     }),
     GoogleProvider({
-      clientId: env.GOOGLE_CLIENT_ID , 
-      clientSecret: env.GOOGLE_CLIENT_SECRET ,
+      clientId: process.env.GOOGLE_CLIENT_ID as string, 
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }), 
   ],
 };
